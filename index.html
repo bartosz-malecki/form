@@ -1,15 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formularz testowy</title>
     <link href="normalize.css" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        
+      <h1>FORMULARZ</h1>
+
+      <form class="form">
+        <p>
+          <label for="firstName">Your name: </label>
+          <input
+            class="form__item"
+            type="text"
+            placeholder="Enter your name"
+            id="firstName"
+            name="firstName"
+          />
+        </p>
+        <p>
+          <label
+            >Your last name:
+            <input
+              class="form__item"
+              type="text"
+              placeholder="Enter your last name"
+              name="lastName"
+          /></label>
+        </p>
+        <fieldset>
+          <legend>Adress</legend>
+          <p>
+            <label
+              >City:
+              <input
+                class="form__item"
+                placeholder="Enter your city name"
+                name="citytName"
+            /></label>
+          </p>
+          <p>
+            <label
+              >Street name:
+              <input
+                class="form__item"
+                placeholder="Enter your street name"
+                name="streetName"
+            /></label>
+          </p>
+          <p>
+            <label
+              >E-mail:
+              <input
+                class="form__item"
+                id="email"
+                placeholder="Enter your e-mail"
+                name="email"
+                type="email"
+            /></label>
+          </p>
+          <p>
+            <label
+              >Avatar:
+              <input
+                class="form__item"
+                id="file"
+                name="file"
+                type="file"
+            /></label>
+          </p>
+          <p>
+            <label
+              >Range:
+              <input
+                class="form__item"
+                id="range"
+                name="range"
+                type="range"
+                min="0"
+                max="100"
+                step="10"
+            /></label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Favourite football club</legend>
+          <p>
+            <label><input name="footballClub" type="radio" value="Real Madrid"> Real Madrid</label>
+          </p>
+          <p>
+            <label><input name="footballClub" type="radio" value="Barcelona"> FC Barcelona</label>
+          </p>
+        </fieldset>
+        <p>
+          <label><input name="agreement" type="checkbox"> I agree</label>
+        </p>
+      </form>
     </main>
-</body>
+  </body>
 </html>

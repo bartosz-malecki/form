@@ -8,3 +8,19 @@ html {
     box-sizing: inherit;
   }
   
+  body {
+    background: #816f6f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .form {
+
+  }
+
+  .form__item {
+    display: block;
+    width: 100%;
+  }
