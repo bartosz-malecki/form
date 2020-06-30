@@ -11,7 +11,7 @@
     <main>
       <h1>FORMULARZ</h1>
 
-      <form class="form">
+      <form action="https://dev.cotenfrontend.pl" class="form">
         <p>
           <label for="firstName">Your name: </label>
           <input
@@ -66,11 +66,7 @@
           <p>
             <label
               >Avatar:
-              <input
-                class="form__item"
-                id="file"
-                name="file"
-                type="file"
+              <input class="form__item" id="file" name="file" type="file"
             /></label>
           </p>
           <p>
@@ -90,14 +86,36 @@
         <fieldset>
           <legend>Favourite football club</legend>
           <p>
-            <label><input name="footballClub" type="radio" value="Real Madrid"> Real Madrid</label>
+            <label
+              ><input name="footballClub" type="radio" value="Real Madrid" />
+              Real Madrid</label
+            >
           </p>
           <p>
-            <label><input name="footballClub" type="radio" value="Barcelona"> FC Barcelona</label>
+            <label
+              ><input name="footballClub" type="radio" value="Barcelona" /> FC
+              Barcelona</label
+            >
           </p>
         </fieldset>
         <p>
-          <label><input name="agreement" type="checkbox"> I agree</label>
+          <label for="band">Pick one band</label>
+          <select name="band" id="band">
+            <option value="band-1">Machine Head</option>
+            <option value="band-2">Trivium</option>
+            <option value="band-3">Behemoth</option>
+            <option value="band-4">Mgła</option>
+          </select>
+        </p>
+        <p>
+          <label for="more">More:</label>
+          <textarea id="more" name="more"></textarea>
+        </p>
+        <p>
+          <label><input name="agreement" type="checkbox" /> I agree</label>
+        </p>
+        <p>
+          <input type="submit" value="Send"/>
         </p>
       </form>
     </main>
