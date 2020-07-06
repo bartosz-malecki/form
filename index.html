@@ -9,29 +9,39 @@
   </head>
   <body>
     <main>
-      <h1>FORMULARZ</h1>
+      <h1 class="title">TEST FORM</h1>
 
-      <form action="https://dev.cotenfrontend.pl" class="form">
-        <p>
-          <label for="firstName">Your name: </label>
-          <input
-            class="form__item"
-            type="text"
-            placeholder="Enter your name"
-            id="firstName"
-            name="firstName"
-          />
-        </p>
-        <p>
-          <label
-            >Your last name:
+      <form method="post" action="https://dev.cotenfrontend.pl" class="form">
+        <fieldset>
+          <legend>Name</legend>
+          <p>
+            <label for="firstName">Your name: </label>
             <input
               class="form__item"
               type="text"
-              placeholder="Enter your last name"
-              name="lastName"
-          /></label>
-        </p>
+              placeholder="Enter your name"
+              id="name"
+              name="name"
+            />
+          </p>
+          <p>
+            <label
+              >Your last name:
+              <input
+                class="form__item"
+                type="text"
+                placeholder="Enter your last name"
+                name="lastName"
+            /></label>
+          </p>
+          </p>
+          <p>
+            <label
+              >Avatar:
+              <input class="form__item" id="file" name="file" type="file"
+            /></label>
+          </p>
+        </fieldset>
         <fieldset>
           <legend>Adress</legend>
           <p>
@@ -63,12 +73,7 @@
                 type="email"
             /></label>
           </p>
-          <p>
-            <label
-              >Avatar:
-              <input class="form__item" id="file" name="file" type="file"
-            /></label>
-          </p>
+
           <p>
             <label
               >Range:
@@ -84,7 +89,7 @@
           </p>
         </fieldset>
         <fieldset>
-          <legend>Favourite football club</legend>
+          <legend>Favourite spanish football club</legend>
           <p>
             <label
               ><input name="footballClub" type="radio" value="Real Madrid" />
@@ -97,6 +102,12 @@
               Barcelona</label
             >
           </p>
+          <p>
+            <label
+              ><input name="footballClub" type="radio" value="other" />
+              Other</label
+            >
+          </p>
         </fieldset>
         <p>
           <label for="band">Pick one band</label>
@@ -105,6 +116,7 @@
             <option value="band-2">Trivium</option>
             <option value="band-3">Behemoth</option>
             <option value="band-4">Mgła</option>
+            <option value="band-5">I don't like metal</option>
           </select>
         </p>
         <p>
@@ -115,7 +127,7 @@
           <label><input name="agreement" type="checkbox" /> I agree</label>
         </p>
         <p>
-          <input type="submit" value="Send"/>
+          <input type="submit" value="Send" />
         </p>
       </form>
     </main>
