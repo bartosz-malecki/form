@@ -3,136 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formularz testowy</title>
+    <title>Form</title>
     <link href="normalize.css" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <main>
-      <h1 class="title">TEST FORM</h1>
+    <main class="form">
+      <h1 class="form__header">Come and Join us!</h1>
+      <section class="form__section">
+        <form method="post" action="https://dev.cotenfrontend.pl" class="form">
+          <h2 class="form__section-header">Register Account</h2>
 
-      <form method="post" action="https://dev.cotenfrontend.pl" class="form">
-        <fieldset>
-          <legend>Name</legend>
           <p>
-            <label for="firstName">Your name: </label>
             <input
               class="form__item"
               type="text"
-              placeholder="Enter your name"
+              placeholder="Your Name"
               id="name"
               name="name"
+            /><span class="validity"></span>
+          </p>
+          <p>
+            <input
+              class="form__item"
+              type="text"
+              placeholder="Last Name"
+              name="lastName"
+            /><span class="validity"></span>
+          </p>
+          <p>
+            <input
+              class="form__item"
+              type="text"
+              placeholder="Username"
+              name="userName"
+            /><span class="validity"></span>
+          </p>
+          <p>
+            <input
+              class="form__item"
+              id="email"
+              placeholder="Your email"
+              name="email"
+              type="email"
+            /><span class="validity"></span>
+          </p>
+          <p>
+            <input
+              class="form__item"
+              id="password"
+              placeholder="Password"
+              name="password"
+              type="password"
+              required
+            /><span class="validity"></span>
+          </p>
+          <p>
+            <input
+              class="form__item"
+              id="confirmPassword"
+              placeholder="Confirm Password"
+              name="confirmPassword"
+              type="password"
+              required
             />
           </p>
           <p>
-            <label
-              >Your last name:
-              <input
-                class="form__item"
-                type="text"
-                placeholder="Enter your last name"
-                name="lastName"
-            /></label>
-          </p>
-          </p>
-          <p>
-            <label
-              >Avatar:
-              <input class="form__item" id="file" name="file" type="file"
-            /></label>
-          </p>
-        </fieldset>
-        <fieldset>
-          <legend>Adress</legend>
-          <p>
-            <label
-              >City:
-              <input
-                class="form__item"
-                placeholder="Enter your city name"
-                name="citytName"
-            /></label>
+            <input
+              class="form__item"
+              id="phone"
+              placeholder="Phone Number"
+              name="phone"
+              type="tel"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+            /><span class="validity"></span>
           </p>
           <p>
-            <label
-              >Street name:
-              <input
-                class="form__item"
-                placeholder="Enter your street name"
-                name="streetName"
-            /></label>
-          </p>
-          <p>
-            <label
-              >E-mail:
-              <input
-                class="form__item"
-                id="email"
-                placeholder="Enter your e-mail"
-                name="email"
-                type="email"
-            /></label>
+            <input
+              class="form__item"
+              list="countrys"
+              id="country"
+              name="country"
+              placeholder="Country"
+            />
+
+            <datalist id="countrys">
+              <option value="Poland"></option>
+              <option value="UK"></option>
+              <option value="US"></option>
+            </datalist>
           </p>
 
           <p>
             <label
-              >Range:
-              <input
-                class="form__item"
-                id="range"
-                name="range"
-                type="range"
-                min="0"
-                max="100"
-                step="10"
-            /></label>
-          </p>
-        </fieldset>
-        <fieldset>
-          <legend>Favourite spanish football club</legend>
-          <p>
-            <label
-              ><input name="footballClub" type="radio" value="Real Madrid" />
-              Real Madrid</label
+              ><input name="agreement" type="checkbox" /> I agree to
+              <a href="#" class="link">Terms of Service</a> &
+              <a href="#" class="link">Privacy Policy</a></label
             >
           </p>
           <p>
-            <label
-              ><input name="footballClub" type="radio" value="Barcelona" /> FC
-              Barcelona</label
-            >
+            <input type="submit" value="Register" />
           </p>
-          <p>
-            <label
-              ><input name="footballClub" type="radio" value="other" />
-              Other</label
-            >
-          </p>
-        </fieldset>
-        <fieldset>
-          <legend>Random</legend>
-        <p>
-          <label for="band">Pick one band</label>
-          <select name="band" id="band">
-            <option value="band-1">Machine Head</option>
-            <option value="band-2">Trivium</option>
-            <option value="band-3">Behemoth</option>
-            <option value="band-4">Mgła</option>
-            <option value="band-5">I don't like metal</option>
-          </select>
-        </p>
-        <p>
-          <label for="more">More:</label>
-          <textarea id="more" name="more"></textarea>
-        </p>
-        </fieldset>
-        <p>
-          <label><input name="agreement" type="checkbox" /> I agree</label>
-        </p>
-        <p>
-          <input type="submit" value="Send" />
-        </p>
-      </form>
+        </form>
+      </section>
     </main>
   </body>
 </html>
