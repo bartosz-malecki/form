@@ -14,16 +14,17 @@
         <form method="post" action="https://dev.cotenfrontend.pl" class="form">
           <h2 class="form__section-header">Register Account</h2>
 
-          <p>
+          <p class="form__paragraph">
             <input
               class="form__item"
               type="text"
               placeholder="Your Name"
               id="name"
               name="name"
+              required
             /><span class="validity"></span>
           </p>
-          <p>
+          <p class="form__paragraph">
             <input
               class="form__item"
               type="text"
@@ -31,15 +32,16 @@
               name="lastName"
             /><span class="validity"></span>
           </p>
-          <p>
+          <p class="form__paragraph">
             <input
               class="form__item"
               type="text"
               placeholder="Username"
               name="userName"
+              required
             /><span class="validity"></span>
           </p>
-          <p>
+          <p class="form__paragraph">
             <input
               class="form__item"
               id="email"
@@ -48,7 +50,7 @@
               type="email"
             /><span class="validity"></span>
           </p>
-          <p>
+          <p class="form__paragraph">
             <input
               class="form__item"
               id="password"
@@ -58,7 +60,7 @@
               required
             /><span class="validity"></span>
           </p>
-          <p>
+          <p class="form__paragraph">
             <input
               class="form__item"
               id="confirmPassword"
@@ -68,17 +70,17 @@
               required
             />
           </p>
-          <p>
+          <p class="form__paragraph">
             <input
               class="form__item"
               id="phone"
               placeholder="Phone Number"
               name="phone"
               type="tel"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+              pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
             /><span class="validity"></span>
           </p>
-          <p>
+          <p class="form__paragraph">
             <input
               class="form__item"
               list="countrys"
@@ -93,15 +95,18 @@
               <option value="US"></option>
             </datalist>
           </p>
+          <p class="form__desc">
+            Don't worry, you can change your username later.
+          </p>
 
-          <p>
+          <p class="form__desc">
             <label
               ><input name="agreement" type="checkbox" /> I agree to
               <a href="#" class="link">Terms of Service</a> &
               <a href="#" class="link">Privacy Policy</a></label
             >
           </p>
-          <p>
+          <p class="form__button">
             <input type="submit" value="Register" />
           </p>
         </form>
